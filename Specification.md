@@ -1,0 +1,7 @@
+- Garder la charte graphique
+- Garder le principe de vignette par predication
+    - garder le template de la vignettte ( faire un template a reutiliser, modifier ce template devra s'appliquer a chaque lecture). Ajouter des fonctionnalites professionnel d'un application podcast a la vignettte template audio. je ne veux pas une page html par predication.
+- Je veux resoudre le probleme de chargement des audios
+- Proposer une nvigation dans le patimoine des audios par année et par mois, mettre en desectivé les années ou les mois qui n"on pas de predication.
+- Proposer une navigation par theme, ce qui n'on pas de theme mettre dans le lot "theme a definir"
+- Proposer une recherche par titre

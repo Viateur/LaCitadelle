@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="jquery.js">
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#showSimpleModal").click(function() {
+                $("div#simpleModal").addClass("show");
+                return false;
+            });
+
+            $("#closeSimple").click(function() {
+                $("div#simpleModal").removeClass("show");
+                return false;
+            });
+        });
+    </script>
+
+    <style type="text/css">
+        div#simpleModal {
+            position: absolute;
+            top: 40px;
+            width: 320px;
+            left: 170px;
+            border: solid 1px #bbb;
+            padding: 20px;
+            background: #fff;
+            -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+            opacity: 0.0;
+            -webkit-transition: opacity 0.0s ease-out;
+            z-index: 0;
+        }
+
+        div#simpleModal.show {
+            opacity: 1.0;
+            z-index: 100;
+            -webkit-transition-duration: 0.25s;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <section class="banner">
+        <div class="header_container">
+            <label for="menu-control" class="hamburger">
+                <li class="hamburger__icon"></li>
+                <li class="hamburger__icon"></li>
+                <li class="hamburger__icon"></li>
+            </label>
+            <div class="logoTitre">
+                <div id="titre">
+                    <h1>LA CITADELLE MEDIA</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="video_thumbnail">
+
+            <a href="" id="showSimpleModal">Show Modal</a>
+
+            <div id="simpleModal" class="modal video_container">
+                <video width="320" height="240" controls>
+                    <source src="../video/Culte14052023VideoFinal.mp4" type="video/mp4">
+                </video>
+                <a href="" id="closeSimple">Close</a>
+            </div>
+
+            <div class="video_container">
+                <video width="300" height="265" controls>
+                    <source src="../videos/Culte14052023VideoFinal.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+
+        <input type="checkbox" id="menu-control" class="menu-control">
+        <aside class="sidebar">
+            <nav class="sidebar__menu">
+                <a href="http://lacitadellemedia.net/">Accueil</a>
+                <a href="http://lacitadellemedia.net/themes.html">Themes</a>
+                <a href="http://lacitadellemedia.net/audios_2023.html">Audios 2023</a>
+                <a href="http://lacitadellemedia.net/audios_2022.html">Audios 2022</a>
+                <a href="http://lacitadellemedia.net/videos.html">Videos</a>
+            </nav>
+            <label for="menu-control" class="sidebar__close">
+            </label>
+        </aside>
+
+    </section>
+    <div class="footer_container">
+        <div id="Contact">
+            <p>Nzeng-Ayong, Libreville GABON</p>
+            <p>Contact: +241(O)77 23 12 90</p>
+            <a href="https://youtube.com/@egliselacitadelle1009?si=K5vUAUvgMpzcqrhe"> <i class="fa fa-youtube-play" style="font-size:28px;color:red"></i> </a>
+
+        </div>
+    </div>
+</body>
+
+</html>

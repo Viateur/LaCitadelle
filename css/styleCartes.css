@@ -1,0 +1,147 @@
+
+.thumbnail_container_card {
+    margin: auto;
+    margin-top: 75px;
+    margin-bottom: 160px;
+    display: flex;
+    flex-direction: column;
+}
+.playground{
+    height: 11cm;
+	width:  8cm;
+	margin: auto;
+}
+
+.recto_activeCard{
+    position: relative;
+    height: 10cm;
+    width: 8cm;
+    top: -41.5vmax;
+    opacity: 0;
+}
+
+.recto_activeCard1{
+    position: relative;
+    height: 10cm;
+    width: 8cm;
+    top: 1vmax;
+}
+
+.recto_activeCard2{
+    position: relative;
+    height: 10cm;
+    width: 8cm;
+    top: -125vmax;
+}
+.transition_index{
+	transition: z-index 2s;
+    transition-timing-function: linear;
+}
+
+.verso_activeCard{
+    position: relative;
+    height: 10cm;
+    width: 8cm;
+    top: -83vmax;
+    }
+
+.transition_margin{
+	transition: margin 2s;
+    transition-timing-function: linear;
+}
+
+.show_1 {
+    z-index: -1;
+}
+
+.show {
+z-index: 2;
+}
+
+.hide {
+z-index: -2;
+    opacity: 0;
+}
+
+
+.rotate {
+transform: rotate(180deg);
+}
+
+/*
+.out {
+transform-origin: 20% 40%;
+}
+
+
+.verso_activeCard:hover {
+margin-left : 600px;
+z-index: -1;
+}*/
+
+.up {
+  z-index: 1;
+}
+
+
+.down {
+  z-index: -1;
+}
+
+.out {
+  margin-left : 600px;
+}
+
+.outLeft {
+    margin-left : 600px;
+}
+
+.outRight {
+    margin-left : -600px;
+}
+
+.playground_bottom{
+    display: flex;
+    margin-top: 1.5vmax;
+    padding-top: 1.5vmax;
+    flex-direction: row;
+}
+
+
+#card_count{
+   background-color: #FE7F88;
+    color: white;
+    width: 7vmax;
+    height: 7vmax;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 9vmax;
+
+}
+
+#count{
+    position: relative;
+    top: 2vmax;
+    font-size: 2vmax;
+}
+
+#next{
+    background-color: #FE7F88;
+    color: white ;
+    width: 7vmax;
+    height: 7vmax;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 9vmax;
+  z-index: 10;
+}
+
+#previous{
+    background-color: #FE7F88;
+    color: white ;
+    width: 7vmax;
+    height: 7vmax;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 10;
+}

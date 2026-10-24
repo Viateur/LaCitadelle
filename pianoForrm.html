@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/stylePiano.css" />
+
+	</head>
+	<body>
+		<link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+		   <section  class ="banner_piano">
+			  <div class="header_container rotate90Header">
+			  	<label for="menu-control" class="hamburger">
+					<li class="hamburger__icon"></li>
+					<li class="hamburger__icon"></li>
+					<li class="hamburger__icon"></li>
+		        </label>
+		      <div class ="logoTitre">
+	              <div id="titre">
+	              	<h1>LA CITADELLE MEDIA</h1>
+	              </div>
+	              </div>
+             </div>
+               <div id="surveyContainer" class="thumbnail_container_piano rotate90">
+				   <script type="importmap">
+		  {
+			"imports": {
+			  "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js",
+			  "musique" : "./script/musique.js"
+			}
+		  }
+		</script>
+				   <div id="app">{{ message }}</div>
+
+
+				   <script  type="module" >
+
+					   import { createApp, ref } from 'vue'
+
+					   createApp({
+						   setup() {
+							   const message = "";
+							   return {
+								   message
+							   }
+						   }
+					   }).mount('#app')
+				   </script>
+
+               </div>
+			<input type="checkbox" id="menu-control" class="menu-control">
+			<aside class="sidebar">
+				<nav class ="sidebar__menu">
+					<a href="index.html">Accueil</a>
+					<a href="jeux.html">Jeux</a>
+					<a href="themes.html">Themes</a>
+					<a href="audios_2024.html">Audios 2024</a>
+					<a href="audios_2023.html">Audios 2023</a>
+					<a href="audios_2022.html">Audios 2022</a>
+					<a href="videos.html">Videos</a>
+					<a href="piano.html">Piano</a>
+				</nav>
+				<label for="menu-control"class="sidebar__close">
+				</label>
+			</aside>
+
+		</section>
+	</body>
+</html>

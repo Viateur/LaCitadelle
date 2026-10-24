@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/stylePiano.css" />
+        <style>
+            form {
+                border: dashed black 1px;
+                width:30vmax;
+                padding: 20px;
+            }
+            #expert {
+                display: flex;
+                flex-wrap: wrap;
+                background-color: #587979;
+                margin: auto;
+            }
+            #sheet {
+                border: dashed black 1px;
+                width:70vmax;
+                padding: 20px;
+                font-size: 2vmax;
+            }
+            #sheetItems {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #form {
+                width:30vmax;
+                font-size: 2vmax;
+            }
+            .note{
+                height:3vmax ;
+                border: dashed white 1px;
+                margin: 3px;
+            }
+
+        </style>
+	</head>
+	<body>
+		<link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+		   <section  class ="banner_piano">
+			  <div class="header_container rotate90Header">
+			  	<label for="menu-control" class="hamburger">
+					<li class="hamburger__icon"></li>
+					<li class="hamburger__icon"></li>
+					<li class="hamburger__icon"></li>
+		        </label>
+		      <div class ="logoTitre">
+	              <div id="titre">
+	              	<h1>LA CITADELLE MEDIA</h1>
+	              </div>
+	              </div>
+             </div>
+
+
+               <div class="thumbnail_container_piano rotate90">
+
+                   <div id="keyboard">
+                       <div id=octave0 class="octave">
+                           <div id=DO0 class="do whiteKey activate"><span>DO</span></div>
+                           <div id=RE0 class="re whiteKey activate"><span>RE</span></div>
+                           <div id=MI0 class="mi whiteKey activate"><span>MI</span></div>
+                           <div id=FA0 class="fa whiteKey activate"><span>FA</span></div>
+                           <div id=SOL0 class="sol whiteKey activate"><span>SOL</span></div>
+                           <div id=LA0 class="la whiteKey activate"><span>LA</span></div>
+                           <div id=SI0 class="si whiteKey activate"><span>SI</span></div>
+                           <div id=DOd0 class="doDiese blackKey activate"><span>DO#</span> </div>
+                           <div id=REd0 class="reDiese blackKey activate"><span>RE#</span> </div>
+                           <div id=FAd0 class="faDiese blackKey activate"><span>FA#</span> </div>
+                           <div id=SOLd0 class="solDiese blackKey activate"><span>SOL#</span> </div>
+                           <div id=LAd0 class="laDiese blackKey activate"><span>LA#</span> </div>
+                       </div>
+                       <!-- fin octave0 -->
+                       <div id=octave1 class="octave">
+                           <div id=DO1 class="do whiteKey activate"><span>DO</span></div>
+                           <div id=RE1 class="re whiteKey activate"><span>RE</span></div>
+                           <div id=MI1 class="mi whiteKey activate"><span>MI</span></div>
+                           <div id=FA1 class="fa whiteKey activate"><span>FA</span></div>
+                           <div id=SOL1 class="sol whiteKey activate"><span>SOL</span></div>
+                           <div id=LA1 class="la whiteKey activate"><span>LA</span></div>
+                           <div id=SI1 class="si whiteKey activate"><span>SI</span></div>
+                           <div id=DOd1 class="doDiese blackKey activate"><span>DO#</span> </div>
+                           <div id=REd1 class="reDiese blackKey activate"><span>RE#</span> </div>
+                           <div id=FAd1 class="faDiese blackKey activate"><span>FA#</span> </div>
+                           <div id=SOLd1 class="solDiese blackKey activate"><span>SOL#</span> </div>
+                           <div id=LAd1 class="laDiese blackKey activate"><span>LA#</span> </div>
+                       </div>
+                       <!-- fin octave1 -->
+                       <div id=octave2 class="octave">
+                           <div id=DO2 class="do whiteKey activate"><span>DO</span></div>
+                           <div id=RE2 class="re whiteKey activate"><span>RE</span></div>
+                           <div id=MI2 class="mi whiteKey activate"><span>MI</span></div>
+                           <div id=FA2 class="fa whiteKey activate"><span>FA</span></div>
+                           <div id=SOL2 class="sol whiteKey activate"><span>SOL</span></div>
+                           <div id=LA2 class="la whiteKey activate"><span>LA</span></div>
+                           <div id=SI2 class="si whiteKey activate"><span>SI</span></div>
+                           <div id=DOd2 class="doDiese blackKey activate"><span>DO#</span> </div>
+                           <div id=REd2 class="reDiese blackKey activate"><span>RE#</span> </div>
+                           <div id=FAd2 class="faDiese blackKey activate"><span>FA#</span> </div>
+                           <div id=SOLd2 class="solDiese blackKey activate"><span>SOL#</span> </div>
+                           <div id=LAd2 class="laDiese blackKey activate"><span>LA#</span> </div>
+                       </div>
+                       <!-- fin octave2 -->
+
+                   </div>
+                   <!-- end keyboard -->
+
+                   <div id="hands">
+
+                       <div id="leftHand">
+                           <img src="imagePiano/left.jpg">
+                           <div class="leftChord">
+                               <strong></strong>
+                           </div>
+
+                           <div id="leftFinger1" class="finger activate">
+                               <strong>DO</strong>
+                           </div>
+                           <div id="leftFinger2" class="finger activate">
+                               <strong>SI</strong>
+                           </div>
+                           <div id="leftFinger3" class="finger activate">
+                               <strong>LA</strong>
+                           </div>
+                           <div id="leftFinger4" class="finger activate">
+                               <strong>SOL</strong>
+                           </div>
+                           <div id="leftFinger5" class="finger activate">
+                               <strong>FA</strong>
+                           </div>
+
+                       </div>
+
+                       <div id="rightHand">
+
+                           <img src="imagePiano/right.jpg">
+
+                           <div class="rightChord">
+                               <strong></strong>
+                           </div>
+
+                           <div id="rightFinger1" class="finger activate">
+                               <strong></strong>
+                           </div>
+                           <div id="rightFinger2" class="finger activate">
+                               <strong></strong>
+                           </div>
+
+                           <div id="rightFinger3" class="finger activate">
+                               <strong></strong>
+                           </div>
+                           <div id="rightFinger4" class="finger activate">
+                               <strong></strong>
+                           </div>
+                           <div id="rightFinger5" class="finger activate">
+                               <strong></strong>
+                           </div>
+
+                       </div>
+
+                   </div>
+
+                   <div id="control">
+                       <div id="marque">&copy; 2024 wondersong school</div>
+                       <button id="previous" type="button">
+                           <<<</button> <button id="play" type="button">►</button>
+                       <button id="stop" type="button">II</button>
+                       <button id="next" type="button">>>></button>
+
+                   </div>
+                    <div>
+                       <div id="app">
+                           <div id="expert">
+                               <div id="form">
+                                   <form v-on:submit.prevent="addItem">
+                                       <div>Note</div>
+                                       <select v-model="itemNote">
+                                           <option disabled value="">Please select one Note</option>
+                                           <option>DO</option>
+                                           <option>DOd</option>
+                                           <option>RE</option>
+                                           <option>REd</option>
+                                           <option>MI</option>
+                                           <option>FA</option>
+                                           <option>FAd</option>
+                                           <option>SOL</option>
+                                           <option>SOLd</option>
+                                           <option>LA</option>
+                                           <option>LAd</option>
+                                           <option>SI</option>
+                                       </select>
+
+                                       <div>Octave</div>
+                                       <select v-model="itemOctave">
+                                           <option disabled value="">Please select one Octave</option>
+                                           <option>0</option>
+                                           <option>1</option>
+                                           <option>2</option>
+                                       </select>
+
+                                       <div>Mesure</div>
+                                       <select v-model="itemTime">
+                                           <option disabled value="">Please select one time</option>
+                                           <option>ronde</option>
+                                           <option>blanche</option>
+                                           <option>noir</option>
+                                           <option>croche</option>
+                                           <option>double croche</option>
+                                           <option>triple croche</option>
+                                           <option>quadriple croche</option>
+                                       </select>
+
+                                       <div>Doigt</div>
+                                       <select v-model="itemFinger">
+                                           <option disabled value="">Please select one finger</option>
+                                           <option>L5</option>
+                                           <option>L4</option>
+                                           <option>L3</option>
+                                           <option>L2</option>
+                                           <option>L1</option>
+                                           <option>R1</option>
+                                           <option>R2</option>
+                                           <option>R3</option>
+                                           <option>R4</option>
+                                           <option>R5</option>
+                                       </select>
+                                       <button type="submit">Add item</button>
+                                   </form>
+                               </div>
+                               <div id="sheet" >
+                                   <p> melodie:</p>
+                                   <div id="sheetItems" >
+                                       <div class="note" v-for="item in noteList2">{{item.note }}_{{ item.octave }} - {{ item.time }} - {{ item.finger }}  </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+			
+
+			<input type="checkbox" id="menu-control" class="menu-control">
+			<aside class="sidebar">
+				<nav class ="sidebar__menu">
+                      <a href="index.html">Accueil</a>
+		            <a href="jeux.html">Jeux</a>
+		            <a href="themes.html">Themes</a>
+		            <a href="audios.html">Audios</a>
+		            <a href="videos.html">Videos</a>
+		            <a href="piano.html">Piano</a>
+
+				</nav>
+				<label for="menu-control"class="sidebar__close">
+				</label>
+			</aside>
+
+		</section>
+	</body>
+</html>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="script/scriptPiano3.js" type="module"></script>

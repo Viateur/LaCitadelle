@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/styleCartes.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+</head>
+
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+    <section class="banner">
+        <div class="header_container">
+            <label for="menu-control" class="hamburger">
+                <li class="hamburger__icon"></li>
+                <li class="hamburger__icon"></li>
+                <li class="hamburger__icon"></li>
+            </label>
+            <div class="logoTitre">
+                <div id="titre">
+                    <h1>LA CITADELLE MEDIA</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="thumbnail_container_card">
+
+            <div class="playground">
+
+                <div id="recto_activeCard_frame1" class="recto_activeCard1 show_1">
+                    <img id="recto_activeCard1" src="../imagesMMCJ/recto_questionsOrales_1.png" />
+                </div>
+                <div id="recto_activeCard_frame" class="recto_activeCard show">
+                    <img id="recto_activeCard" src="../imagesMMCJ/recto_questionsOrales_1.png" />
+                </div>
+                <div id="verso_activeCard_frame" class="verso_activeCard hide">
+                    <img id="verso_activeCard" src="../imagesMMCJ/verso_questionsOrales_1.png" />
+                </div>
+                <div id="recto_activeCard_frame2" class="recto_activeCard2 show_1">
+                    <img id="recto_activeCard2" src="../imagesMMCJ/recto_questionsOrales_1.png" />
+                </div>
+            </div>
+            <div class="playground_bottom">
+                <div id="previous_button">
+                    <button id="previous"> <<< </button>
+                </div>
+                <div id="card_count">
+                    <div id="count"> 1/24 </div>
+                </div>
+                <div id="next_button">
+                    <button id="next"> >>> </button>
+                </div>
+            </div>
+
+        </div>
+        <input type="checkbox" id="menu-control" class="menu-control">
+        <aside class="sidebar">
+            <nav class="sidebar__menu">
+                <a href="../index.html">Accueil</a>
+                <a href="../jeux.html">Jeux</a>
+                <a href="../themes.html">Themes</a>
+                <a href="../audios_2024.html">Audios 2024</a>
+                <a href="../audios_2023.html">Audios 2023</a>
+                <a href="../audios_2022.html">Audios 2022</a>
+                <a href="../videos.html">Videos</a>
+                <a href="../piano.html">Piano</a>
+            </nav>
+            <label for="menu-control" class="sidebar__close">
+            </label>
+        </aside>
+
+    </section>
+
+    <div class="footer_container">
+        <div id="Contact">
+            <p>Nzeng-Ayong, Libreville GABON</p>
+            <p>
+                <a href="https://wa.me/24107231290" style="outline:none;text-decoration:none;">
+                    <i class="fa fa-whatsapp" style="font-size:18px;color:green">
+                    </i> +241(O)77 23 12 90
+                </a>
+            </p>
+            <a href="https://youtube.com/@egliselacitadelle1009?si=K5vUAUvgMpzcqrhe">
+                <i class="fa fa-youtube-play" style="font-size:28px;color:red">
+                </i>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const playground = document.querySelector('.playground');
+    const recto_activeCard = document.querySelector('.recto_activeCard');
+    const recto_activeCard1 = document.querySelector('.recto_activeCard1');
+    const recto_activeCard2 = document.querySelector('.recto_activeCard2');
+    const verso_activeCard = document.querySelector('.verso_activeCard');
+    const playground_card = document.querySelector('.card');
+    const card_count = document.getElementById("count");
+    var i = 1;
+    var newStep = "true";
+
+
+
+    // Get the button, and when the user clicks on it, execute myFunction
+    document.getElementById("recto_activeCard_frame").onclick = function() {
+        myFunction()
+    };
+
+    /* myFunction toggles between adding and removing the show class, which is used to hide and drag1show the dropdown content */
+    function myFunction() {
+        if (newStep == "false") {
+            verso_activeCard.innerHTML = `<img id="verso_activeCard" src="../imagesMMCJ/verso_questionsOrales_${i}.png" />`
+
+        }
+        recto_activeCard.className = "card recto_activeCard hide";
+        verso_activeCard.className = "card verso_activeCard show";
+    };
+
+
+    // Get the button, and when the user clicks on it, execute myFunction
+    document.getElementById("verso_activeCard_frame").onclick = function() {
+        myFunctionVerso()
+    };
+
+    /* myFunction toggles between adding and removing the show class*/
+
+    function myFunctionVerso() {
+
+       document.getElementById("verso_activeCard").classList.toggle("rotate");
+    };
+
+
+    document.getElementById("next").onclick = function() {
+        myFunctionDrag()
+    };
+    document.getElementById("previous").onclick = function() {
+        myFunctionDragReverse()
+    };
+    let outleft
+    function myFunctionDrag() {
+
+
+
+       if(verso_activeCard.className==="card verso_activeCard show"){
+            recto_activeCard.className ="recto_activeCard show";
+            recto_activeCard1.className ="recto_activeCard1 show_1";
+            recto_activeCard2.className ="recto_activeCard2 show_1";
+            verso_activeCard.className = "card verso_activeCard show transition_margin outLeft";
+        }
+
+       else if( verso_activeCard.className === "card verso_activeCard show transition_margin outLeft"){
+           recto_activeCard.className = "recto_activeCard show";
+           recto_activeCard1.className ="recto_activeCard1 show_1";
+           verso_activeCard.className= "verso_activeCard hide"
+           recto_activeCard2.className = "card recto_activeCard2 show transition_margin outLeft";
+        }
+
+       else if(recto_activeCard2.className === "card recto_activeCard2 show transition_margin outLeft"){
+           recto_activeCard.className ="recto_activeCard show";
+           recto_activeCard2.className ="recto_activeCard2 show_1";
+           recto_activeCard1.className = "card recto_activeCard1 show transition_margin outLeft";
+       }
+
+       else if(recto_activeCard1.className === "card recto_activeCard1 show transition_margin outLeft"){
+           recto_activeCard.className ="recto_activeCard show";
+           recto_activeCard1.className ="recto_activeCard1 show_1";
+           recto_activeCard2.className = "card recto_activeCard2 show transition_margin outLeft";
+       }
+
+       else if(recto_activeCard2.className === "card recto_activeCard2 show transition_margin outRight"){
+           recto_activeCard.className ="recto_activeCard show";
+           recto_activeCard2.className ="recto_activeCard2 show_1";
+           recto_activeCard1.className = "card recto_activeCard1 show transition_margin outLeft";
+       }
+
+       else if(recto_activeCard1.className === "card recto_activeCard1 show transition_margin outRight"){
+           recto_activeCard.className ="recto_activeCard show";
+           recto_activeCard1.className ="recto_activeCard1 show_1";
+           recto_activeCard2.className = "card recto_activeCard2 show transition_margin outLeft";
+       }
+       else if( verso_activeCard.className === "card verso_activeCard show transition_margin outRight"){
+           recto_activeCard.className = "recto_activeCard show";
+           recto_activeCard1.className ="recto_activeCard1 show_1";
+           verso_activeCard.className= "verso_activeCard hide"
+           recto_activeCard2.className = "card recto_activeCard2 show transition_margin outLeft";
+       }
+       else {
+           recto_activeCard.className ="recto_activeCard show";
+           recto_activeCard2.className ="recto_activeCard2 show_1";
+           recto_activeCard1.className = "card recto_activeCard1 show transition_margin outLeft";
+       }
+
+        i++;
+        newStep = "false";
+        if(i==25) i=1;
+        card_count.innerText = i +"/24"
+        outleft = true;
+    };
+    function myFunctionDragReverse() {
+
+
+        if(verso_activeCard.className==="card verso_activeCard show"){
+            recto_activeCard.className ="recto_activeCard show";
+            recto_activeCard1.className ="recto_activeCard1 show_1";
+            recto_activeCard2.className ="recto_activeCard2 show_1";
+            verso_activeCard.className = "card verso_activeCard show transition_margin outRight";
+        }
+
+        else if( verso_activeCard.className === "card verso_activeCard show transition_margin outRight"){
+            recto_activeCard.className = "recto_activeCard show";
+            recto_activeCard1.className ="recto_activeCard1 show_1";
+            verso_activeCard.className= "verso_activeCard hide"
+            recto_activeCard2.className = "card recto_activeCard2 show transition_margin outRight";
+        }
+
+        else if(recto_activeCard2.className === "card recto_activeCard2 show transition_margin outRight"){
+            recto_activeCard.className ="recto_activeCard show";
+            recto_activeCard2.className ="recto_activeCard2 show_1";
+            recto_activeCard1.className = "card recto_activeCard1 show transition_margin outRight";
+        }
+
+        else if(recto_activeCard1.className === "card recto_activeCard1 show transition_margin outRight"){
+            recto_activeCard.className ="recto_activeCard show";
+            recto_activeCard1.className ="recto_activeCard1 show_1";
+            recto_activeCard2.className = "card recto_activeCard2 show transition_margin outRight";
+        }
+        else if(recto_activeCard2.className === "card recto_activeCard2 show transition_margin outLeft"){
+            recto_activeCard.className ="recto_activeCard show";
+            recto_activeCard2.className ="recto_activeCard2 show_1";
+            recto_activeCard1.className = "card recto_activeCard1 show transition_margin outRight";
+        }
+
+        else if(recto_activeCard1.className === "card recto_activeCard1 show transition_margin outLeft"){
+            recto_activeCard.className ="recto_activeCard show";
+            recto_activeCard1.className ="recto_activeCard1 show_1";
+            recto_activeCard2.className = "card recto_activeCard2 show transition_margin outRight";
+        }
+        else if( verso_activeCard.className === "card verso_activeCard show transition_margin outLeft"){
+            recto_activeCard.className = "recto_activeCard show";
+            recto_activeCard1.className ="recto_activeCard1 show_1";
+            verso_activeCard.className= "verso_activeCard hide"
+            recto_activeCard2.className = "card recto_activeCard2 show transition_margin outRight";
+        }
+        else {
+            recto_activeCard.className ="recto_activeCard show";
+            recto_activeCard2.className ="recto_activeCard2 show_1";
+            recto_activeCard1.className = "card recto_activeCard1 show transition_margin outRight";
+        }
+
+
+        i--;
+        newStep = "false";
+        if(i==0) i=24;
+        card_count.innerText = i +"/24"
+
+        outleft = false
+    };
+</script>

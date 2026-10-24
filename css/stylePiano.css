@@ -1,0 +1,343 @@
+body {
+   /* background-color:;*/
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* */
+.rotate90 {
+
+}
+
+.thumbnail_container_piano{
+
+    margin-top: 13vmin;
+   /* margin-bottom: 160px;*/
+
+}
+
+.banner_piano{
+   /* width:  ;*/
+    margin: auto;
+
+
+}
+/*keyboard*/
+
+#keyboard {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    /*margin-top: 100px;
+    margin: 10px auto;*/
+    border-color: red;
+    border: solid;
+
+}
+
+.octave {
+    position: relative;
+    border-color: blue;
+    display: flex;
+    flex-direction: row;
+    width: 33.33vmax;
+    /*border: solid;*/
+}
+
+.whiteKey {
+    border: solid;
+    width: 10vmax;
+    height: 18vmax;
+    border-radius: 10px;
+    border-color: black;
+    background-color: white;
+    font-size: 2vmax;
+    z-index: 6;
+
+}
+
+.doDiese {
+    position: absolute;
+    z-index: 10;
+    left: 3.2vmax;
+}
+
+.reDiese {
+    position: absolute;
+    z-index: 10;
+    left: 8vmax; /*le precedent +4.8vmax*/
+}
+
+.faDiese {
+    position: absolute;
+    z-index: 10;
+    left: 17.6vmax;
+}
+
+
+.fa {
+    font: inherit;
+    font-size: 2vmax;
+}
+
+.solDiese {
+    position: absolute;
+    z-index: 10;
+    left: 22.4vmax;
+}
+
+.laDiese {
+    position: absolute;
+    z-index: 10;
+    left: 27.2vmax;
+}
+
+.blackKey {
+    border: solid;
+    width: 3vmax;
+    height: 10vmax;
+    border-radius: 0.5vmax;
+    background-color: black;
+    color: white;
+    font-size: 1.5vmax;
+    z-index: 6;
+}
+
+activate:hover {
+    background-color: yellow;
+}
+
+span {
+    position: absolute;
+    bottom: 0;
+}
+
+
+/*hands*/
+
+#hands {
+    display: flex;
+    flex-direction: row;
+    width: 100vmax;
+    top: 1.5vmax;
+    position: relative;
+}
+
+#leftHand {
+    height: 20vmax;
+    width: 17.5vmax;
+    left: 23vmax;
+    position: relative;
+}
+
+#rightHand {
+    width: 17.5vmax;
+    height: 20vmax;
+    left: 46vmax; /* j'ajoute la 23 au 23 de lefthand, cee liens pourra servir au calcul du css dynamique*/
+    position: relative;
+}
+
+img {
+    width: 17.5vmax;
+    height: 20vmax;
+}
+
+
+/*fingers*/
+
+.finger {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 30;
+    background-color: grey;
+    text-align: center;
+    opacity: 0;
+}
+
+.finger strong {
+    position: relative;
+    top: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+#leftFinger1 {
+    top: 7vmax;
+    left: 15vmax;
+}
+
+#leftFinger2 {
+    top: 1.5vmax;
+    left: 10vmax;
+}
+
+#leftFinger3 {
+    top: -1vmax;
+    left: 7vmax;
+}
+
+#leftFinger4 {
+    top: -1vmax;
+    left: 4vmax;
+}
+
+#leftFinger5 {
+    top: 2vmax;
+    left: 0vmax;
+}
+
+#rightFinger1 {
+    top: 7vmax;
+    right: 15vmax;
+}
+
+#rightFinger2 {
+    top: 1.5vmax;
+    right: 10vmax;
+}
+
+#rightFinger3 {
+    top: -1vmax;
+    right: 7vmax;
+}
+
+#rightFinger4 {
+    top: -1vmax;
+    right: 4vmax;
+}
+
+#rightFinger5 {
+    top: 2vmax;
+    right: 0vmax;
+}
+
+.up {
+    height: 3vmax;
+    width: 3vmax;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 30;
+    background-color: grey;
+    text-align: center;
+    opacity: 0;
+}
+
+.up strong {
+    position: relative;
+    top: 0vmax;
+    color: darkblue;
+    font-size: 1.5vmax;
+}
+
+.down {
+    height: 3vmax;
+    width: 3vmax;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 30;
+    text-align: center;
+}
+
+.down strong {
+  position: relative;
+top: 0vmax;
+color: white;
+font-size: 1.5vmax;
+}
+
+
+/*keyboard*/
+
+.upkey {}
+
+.downkey {}
+
+
+/*Chord*/
+
+.leftChord {
+    top: 16.5vmax;
+    left: 2vmax;
+    height: 3.5vmax;
+    width: 12vmax;
+    position: absolute;
+    border-radius: 10%;
+    z-index: 30;
+    background-color: #1f1938;
+    text-align: center;
+    /*top: 240px;
+    left: 70px;*/
+}
+
+.leftChord strong {
+    position: relative;
+    /*top: 10px;*/
+    color:white;
+    font-size: 2vmax;
+}
+
+.rightChord {
+    top: 16.5vmax;
+    right: 2vmax;
+    height: 3.5vmax;
+    width: 12vmax;
+    position: absolute;
+    border-radius: 10%;
+    z-index: 30;
+    background-color: #1f1938;
+    text-align: center;
+    /*top: 240px;
+    left: 135px;*/
+}
+
+.rightChord strong {
+position: relative;
+/*top: 10px;*/
+color: white;
+font-size: 2vmax;
+}
+
+#control {
+position: relative;
+z-index: 5;
+display: flex;
+flex-direction: row;
+    width: 100vmax;
+    top: 2vmax;
+    background-color: #777777;
+}
+
+#control button {
+    width: 15vmin;
+    margin-right: 0.5vmax;
+    margin-top: 0.5vmax;
+    height: 5vmax;
+    font-size: 2vmax;
+}
+
+#previous {
+    margin-left: 9.2vmax ;
+}
+#marque {
+    width: 26vmax;
+    font-size: 1.8vmax;
+    color: cornsilk;
+    padding: 1.8vmax;
+}
+
+@media screen and (orientation:portrait)
+{
+.rotate90 {
+    transform: rotate(90deg);
+}
+}
+
+@media screen and (orientation:landscape)
+{
+    .rotate90Header {
+        /*transform: rotate(-90deg);*/
+    }
+}

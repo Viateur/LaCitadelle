@@ -1,0 +1,485 @@
+/*I'm using SCSS*/
+body{
+background-color : #332D2D;
+margin: 0px;
+}
+img{
+width : 100%;
+}
+
+html, body {
+	height: 100%;
+}
+
+body{
+	min-height: 100%;
+	font-family: 'Rozha One', serif;
+}
+
+* {
+	box-sizing: border-box;
+  }
+
+.banner{
+	min-height: 100%;
+	width: 100%;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	color:#fff;
+}
+.hamburger{
+	position: absolute;
+	left: 30px;
+	top: 15px;
+	display:flex;
+	height: 18px;
+	width:24px;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	user-select: none;
+	z-index: 1;
+}
+
+.hamburger__icon{
+	display: inline-block;
+	height: 2px;
+	width: 24px;
+	background: #fff;
+	border-radius: 2px;
+
+}
+
+.sidebar{
+	height: 100vh;
+	width: 320px;
+	background:#fff;
+	position: fixed;
+	top:0;
+	left:0;
+	padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    transform: translatex(-100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 51;
+}
+
+.sidebar__close{
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    background: #fff;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px rgba(0,0,0,0.03);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translatex(-100%);
+    rotate(45deg);
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out 0.2s;
+
+}
+
+.sidebar__close::before, .sidebar__close::after{
+	  content: "";
+      height: 2px;
+      background: #898989;
+      width: 24px;
+      display: block;
+      position: absolute;
+}
+.sidebar__close::after{ 
+  transform: rotate(90deg);
+}
+
+
+.sidebar__menu{
+	display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-around;
+    font-size: 36px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    color: #898989;
+}
+
+
+
+.sidebar__menu a{
+	color: currentcolor;
+    text-decoration: none;
+    transform: translatex(-80%);
+    transition: transform 0.4s ease-in-out;
+}
+
+.sidebar__menu a::before{
+	content: "";
+    height: 2px;
+    background: #898989;
+    width: 120px;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transform: translatex(-50%);
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.4s linear;
+}
+
+.sidebar__menu a:hover::before{
+
+	 transform: translatex(0);
+     opacity: 1;
+}
+.menu-control {
+  display: none;
+}
+
+.menu-control:checked + .sidebar{
+	transform: translatex(0);
+}
+
+.menu-control:checked + .sidebar .sidebar__close {
+      transform: translatex(0) rotate(45deg);
+}
+
+.menu-control:checked + .sidebar .sidebar__menu a {
+      transform: translatex(0);
+}    
+
+.header_container{
+    margin: auto;
+    width: 100vw;
+    height: 10vmin;
+    background-color: #984747;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+ 	position: fixed; /* Set the header to fixed position */
+  	top: 0; /* Position the header at the top of the page */
+    z-index: 1;
+    left: 0;
+}
+
+.logoTitre{
+	margin: auto;
+	display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+#logo{
+    width: 100px;
+    height: 100px;
+}
+#titre{
+    width: 100%;
+    height: 50px;
+  	font-size: 0.8em;
+    text-align: left;
+}
+
+
+.thumbnail_container{
+    margin: auto;
+    margin-top: 75px;
+    margin-bottom: 160px;
+}
+
+.thumbnail{
+    margin: auto;
+	font-size: 0.5em;
+  	color: #FE7F88;
+ 	background-color: black;
+    width: 300px;
+    height: 265px;
+    border-radius: 2%;
+    box-shadow: 5px 5px 10px grey;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.thumbnail_2{
+    margin: auto;
+	font-size: 0.5em;
+  	color: #FE7F88;
+ 	background-color: black;
+    width: 300px;
+    height: 265px;
+    border-radius: 2%;
+    box-shadow: 5px 5px 10px grey;
+    margin-bottom: 20px;
+
+}
+
+.thumbnail_1{
+    margin: auto;
+    box-shadow:
+    inset 0 0 2em grey,
+    0 0 5em gold;
+    margin-top: 20px;
+
+}
+.thumbnail_earAgain{
+    margin: auto;
+	font-size: 0.5em;
+  	color: #FE7F88;
+ 	background-color: black;
+    width: 300px;
+    height: 300px;
+    border-radius: 2%;
+   /* box-shadow: 10px 10px 10px yellow;*/
+    box-shadow:
+    inset 0 0 2em grey,
+    0 0 5em gold;
+    margin-top: 70px;
+    margin-bottom: 20px;
+
+}
+
+.video_thumbnail{
+    margin: auto;
+	font-size: 0.5em;
+  	color: #FE7F88;
+ 	background-color: black;
+    width: 300px;
+    height: 265px;
+    border-radius: 2%;
+    box-shadow: 5px 5px 10px grey;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.thumbnail_image{
+    border-radius: 2%;
+    width: 300px;
+    height: 200px;
+
+}
+.thumbnail_image_earAgain{
+    border-radius: 2%;
+    width: 300px;
+    height: 200px;
+
+}
+.emoji_earAgain{
+
+    width: 50px;
+    height: 50px;
+
+}
+
+.pocket_message{
+
+    width: 300px;
+    height: 200px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    border-radius:1%;
+    background-color:maroon;
+   
+}
+
+.pocket_message_earAgain{
+
+    width: 300px;
+    height: 300px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    border-radius:1%;
+    background-color:maroon;
+   
+}
+.eglise{
+
+    /*margin-top:10px;*/
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.title_earAgain{
+
+    width: 300px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    border-radius:1%;
+    background-color:grey;
+    
+
+
+}
+
+
+.audio_container{
+   width: 295px;
+    height: 50px;
+    margin: auto;
+}
+.audio_container_earAgain{
+   width: 295px;
+    height: 50px;
+    margin: auto;
+}
+
+.video_container{
+   width: 300px;
+    height: 265px;
+    margin: auto;
+}
+audio {
+    width: 295px;
+    height: 50px;
+    color: blue;
+}
+iframe
+{
+    width: 295px;
+    height: 50px;
+    color: blue;
+}
+
+.footer_container{
+width: 100%;
+position: fixed;
+z-index: 1;
+bottom : 0;
+color : white;
+background-color: black;
+}
+
+#Contact{
+margin: auto;
+width : 100%;
+text-align: center;
+}
+
+
+ /* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin-top:10px;
+}
+
+
+ /* Style the buttons that are used to open and close the accordion panel */
+.accordion1 {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin-top:10px;
+}
+
+ /* Style the buttons that are used to open and close the accordion panel */
+.accordion2 {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin-top:10px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active1, .accordion1:hover {
+  background-color: #ccc;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active2, .accordion2:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: grey;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  bottom: 10px;
+}
+
+.panel1 {
+  padding: 0 18px;
+  background-color: grey;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  bottom: 10px;
+}      
+
+.active, .accordion:hover {
+ /* background-color: ;*/
+}
+
+.active1, .accordion1:hover {
+ /* background-color: ;*/
+}
+
+.active2, .accordion1:hover {
+ /* background-color: ;*/
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion1:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+
+.active:after {
+  content: "\2212";
+}
+
+.active1:after {
+  content: "\2212";
+}
+
+.active2:after {
+  content: "\2212";
+}

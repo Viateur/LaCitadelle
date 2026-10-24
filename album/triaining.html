@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styleCartes.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style>
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+</head>
+
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+    <section class="banner">
+        <div class="header_container">
+            <label for="menu-control" class="hamburger">
+                <li class="hamburger__icon"></li>
+                <li class="hamburger__icon"></li>
+                <li class="hamburger__icon"></li>
+            </label>
+            <div class="logoTitre">
+                <div id="titre">
+                    <h1>LA CITADELLE MEDIA</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="thumbnail_container">
+
+            <div class="playground">
+                <div  class="recto_activeCard show">
+                    <img  id="recto_activeCard" src="imagesMMCJ/recto_versetsBiblique_1.png" />
+                </div>
+                <div class="verso_activeCard hide">
+                    <img id="verso_activeCard" src="imagesMMCJ/verso_versetsBiblique_1.png" />
+                </div>
+            </div>
+
+        </div>
+
+        <input type="checkbox" id="menu-control" class="menu-control">
+        <aside class="sidebar">
+            <nav class="sidebar__menu">
+                <a href="http://lacitadellemedia.net/">Accueil</a>
+                <a href="http://lacitadellemedia.net/themes.html">Themes</a>
+                <a href="http://lacitadellemedia.net/audios_2024.html">Audios 2024</a>
+                <a href="http://lacitadellemedia.net/audios_2023.html">Audios 2023</a>
+                <a href="http://lacitadellemedia.net/audios_2022.html">Audios 2022</a>
+                <a href="http://lacitadellemedia.net/videos.html">Videos</a>
+            </nav>
+            <label for="menu-control" class="sidebar__close">
+            </label>
+        </aside>
+
+    </section>
+
+    <div class="footer_container">
+        <div id="Contact">
+            <p>Nzeng-Ayong, Libreville GABON</p>
+            <p>
+                <a href="https://wa.me/24107231290" style="outline:none;text-decoration:none;">
+                    <i class="fa fa-whatsapp" style="font-size:18px;color:green">
+                    </i> +241(O)77 23 12 90
+                </a>
+            </p>
+            <a href="https://youtube.com/@egliselacitadelle1009?si=K5vUAUvgMpzcqrhe">
+                <i class="fa fa-youtube-play" style="font-size:28px;color:red">
+                </i>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+const playground = document.querySelector('.playground');
+const recto_activeCard = document.querySelector('.recto_activeCard');
+const verso_activeCard = document.querySelector('.verso_activeCard');
+const playground_card = document.querySelector('.card');
+
+
+// Get the button, and when the user clicks on it, execute myFunction
+document.getElementById("recto_activeCard").onclick = function() {myFunction()};
+
+/* myFunction toggles between adding and removing the show class, which is used to hide and drag1show the dropdown content */
+function myFunction() {
+ recto_activeCard.className ="card recto_activeCard hide";
+ verso_activeCard.className ="card verso_activeCard show";
+};
+
+// Get the button, and when the user clicks on it, execute myFunction
+document.getElementById("verso_activeCard").onclick = function() {myFunctionVerso()};
+/* myFunction toggles between adding and removing the show class, which is usedfile:///Users/admin/Documents/EG/site%20Git/imagesMMCJ/verso_versetsBiblique_1.png to hide and show the dropdown content */
+function myFunctionVerso() {
+ verso_activeCard.classList.toggle("rotate"); 
+};
+
+
+/*
+document.getElementById("verso_activeCard").ondrag = function() {myFunctionDrag()};
+function myFunctionDrag() {
+ recto_activeCard.className ="card recto_activeCard show";
+ verso_activeCard.className ="card verso_activeCard hide";
+ verso_activeCard.className ="out";
+
+
+};
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}*/
+
+
+</script>
