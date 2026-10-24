@@ -1,0 +1,12 @@
+#!/bin/sh
+
+branch=$(git symbolic-ref --quiet --short HEAD) || {
+    echo "Automatic push skipped: HEAD is detached." >&2
+    exit 1
+}
+
+if git rev-parse --abbrev-ref --symbolic-full-name '@{u}' >/dev/null 2>&1; then
+    git push
+else
+    git push --set-upstream origin "$branch"
+fi
